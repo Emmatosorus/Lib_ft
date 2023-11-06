@@ -6,11 +6,11 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:49:38 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/06 17:00:28 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/06 17:08:08 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <libft.h>
 
 int	ft_isprint(int c)
 {
