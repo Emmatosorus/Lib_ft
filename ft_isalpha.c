@@ -6,11 +6,11 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:45:58 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/06 16:42:36 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/07 09:40:07 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
@@ -19,9 +19,6 @@ int	ft_isalpha(int c)
 	return (0);
 }
 /*
-#include <ctype.h>
-#include <stdio.h>
-
 int	main(void)
 {
 	int	c = 10;

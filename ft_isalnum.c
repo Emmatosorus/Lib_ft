@@ -6,11 +6,11 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:22:03 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/06 16:42:26 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/07 09:40:21 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
@@ -22,9 +22,6 @@ int	ft_isalnum(int c)
 }
 
 /*
-#include <ctype.h>
-#include <stdio.h>
-
 int	main(void)
 {
 	char	c = '5';
