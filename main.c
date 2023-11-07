@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 09:28:46 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/07 11:12:33 by epolitze         ###   ########.fr       */
+/*   Created: 2023/11/07 11:13:48 by epolitze          #+#    #+#             */
+/*   Updated: 2023/11/07 11:14:34 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	while (str[i])
-		i++;
-	return (i);
-}
-/*
 int	main(void)
 {
-	char	*str;
-
-	str = "hello";
-	printf("%d", ft_strlen(str));
-}*/
+	printf("Yey!");
+}
