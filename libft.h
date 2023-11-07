@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:31:00 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/07 11:15:01 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/07 12:36:01 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <ctype.h>
+# include <string.h>
 
 int	main(void);
 int	ft_isalpha(int c);
