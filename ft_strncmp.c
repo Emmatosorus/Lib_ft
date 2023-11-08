@@ -1,46 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:22:51 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/08 18:06:55 by epolitze         ###   ########.fr       */
+/*   Created: 2023/11/08 17:14:24 by epolitze          #+#    #+#             */
+/*   Updated: 2023/11/08 17:51:05 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *to, const void *from, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
+	int	i;
 
-	ptr1 = (unsigned char *)to;
-	ptr2 = (unsigned char *)from;
-	while (n > 0)
+	i = 0;
+	if (n == 0)
+		return (0);
+	if (s1[i] == 0 || s2[i] == 0)
+		return (s1[i] - s2[i]);
+	while ((s1[i] || s2[i]) && n > 0)
 	{
-		*ptr1 = *ptr2;
-		ptr1++;
-		ptr2++;
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 		n--;
 	}
-	return (to);
-}
-/*
-int	main(void)
-{
-	char str1[] = "Geeks";
-	char str2[] = "Quiz";
-
-	puts("str1 before memcpy ");
-	puts(str1);
-
-	ft_memcpy(str1, str2, sizeof(str2));
-
-	puts("\nstr1 after memcpy ");
-	puts(str1);
-
 	return (0);
-}*/
+}
+
+// int	main(void)
+// {
+// 	printf("%d", ft_strncmp("abcdefgh", "", 0));
+// }

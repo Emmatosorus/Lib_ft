@@ -1,46 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:22:51 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/08 18:06:55 by epolitze         ###   ########.fr       */
+/*   Created: 2023/11/08 18:02:09 by epolitze          #+#    #+#             */
+/*   Updated: 2023/11/08 19:02:09 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *to, const void *from, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
+	unsigned char	*ptr;
 
-	ptr1 = (unsigned char *)to;
-	ptr2 = (unsigned char *)from;
-	while (n > 0)
+	ptr = (unsigned char *)s;
+	while (*ptr != c && n - 1 > 0)
 	{
-		*ptr1 = *ptr2;
-		ptr1++;
-		ptr2++;
+		if (*ptr == c)
+			return (ptr);
+		ptr++;
 		n--;
 	}
-	return (to);
+	if (*ptr == c)
+		return (ptr);
+	return (NULL);
 }
-/*
+
 int	main(void)
 {
-	char str1[] = "Geeks";
-	char str2[] = "Quiz";
+	int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
 
-	puts("str1 before memcpy ");
-	puts(str1);
-
-	ft_memcpy(str1, str2, sizeof(str2));
-
-	puts("\nstr1 after memcpy ");
-	puts(str1);
-
-	return (0);
-}*/
+	printf("%s", (char *)ft_memchr(tab, -1, 7));
+	printf("\n%s", (char *)memchr(tab, -1, 7));
+}
