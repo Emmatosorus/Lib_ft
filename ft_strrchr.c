@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 13:32:44 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/07 17:55:48 by epolitze         ###   ########.fr       */
+/*   Created: 2023/11/08 15:38:24 by epolitze          #+#    #+#             */
+/*   Updated: 2023/11/08 16:53:11 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*ptr;
+	char	*ptr;
+	int		len;
 
-	ptr = (unsigned char *)s;
-	while (n > 0)
+	ptr = (char *)s;
+	len = 0;
+	while (*ptr != '\0')
 	{
-		*ptr = c;
 		ptr++;
-		n--;
+		len++;
 	}
-	return (s);
+	while (*ptr != c && len > 0)
+	{
+		ptr--;
+		len--;
+		if (*ptr == c)
+			return (ptr);
+	}
+	if (*ptr == c)
+		return (ptr);
+	return (NULL);
 }
-/*
-int	main(void)
-{
-	char str[50] = "GeeksForGeeks is for programming geeks.";
 
-	printf("\nBefore ft_memset(): %s\n", str);
-	ft_memset(str + 13, '.', 8 * sizeof(char));
-	printf("After ft_memset():  %s", str);
-	//memset(str + 13, '.', 8 * sizeof(char));
-	//printf("After memset():  %s", str);
-}*/
+// int	main(void)
+// {
+// 	printf("%s", ft_strrchr("bonjour", 'o'));
+// }

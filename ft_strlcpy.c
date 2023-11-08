@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 09:28:46 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/08 10:08:40 by epolitze         ###   ########.fr       */
+/*   Created: 2023/11/07 15:58:46 by epolitze          #+#    #+#             */
+/*   Updated: 2023/11/08 11:06:00 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,32 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
-/*
-int	main(void)
-{
-	char	*str;
 
-	str = "hello";
-	printf("%ld", ft_strlen(str));
-}*/
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	int	i;
+
+	i = 0;
+	if (size > 0)
+	{
+		while (src[i] != '\0' && size - 1 > 0)
+		{
+			dest[i] = src[i];
+			i++;
+			size--;
+		}
+		dest[i] = '\0';
+	}
+	return (ft_strlen(src));
+}
+
+// int	main(void)
+// {
+// 	char	dest[15];
+// 	int		r;
+
+// 	printf("%s", dest);
+// 	r = ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0);
+// 	printf("\n%s", dest);
+// 	printf("\n%d", r);
+//  }
