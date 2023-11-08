@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 11:13:48 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/07 11:14:34 by epolitze         ###   ########.fr       */
+/*   Created: 2023/11/07 14:02:20 by epolitze          #+#    #+#             */
+/*   Updated: 2023/11/07 17:51:13 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+void	ft_bzero(void *s, size_t n)
 {
-	printf("Yey!");
+	unsigned char	*ptr;
+
+	ptr = (unsigned char *)s;
+	while (n > 0)
+	{
+		*ptr = '\0';
+		ptr++;
+		n--;
+	}
 }

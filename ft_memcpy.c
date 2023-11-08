@@ -1,38 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 13:32:44 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/07 17:55:48 by epolitze         ###   ########.fr       */
+/*   Created: 2023/11/07 14:22:51 by epolitze          #+#    #+#             */
+/*   Updated: 2023/11/07 15:23:57 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memcpy(void *to, const void *from, size_t n)
 {
-	unsigned char	*ptr;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 
-	ptr = (unsigned char *)s;
+	ptr1 = (unsigned char *)to;
+	ptr2 = (unsigned char *)from;
 	while (n > 0)
 	{
-		*ptr = c;
-		ptr++;
+		*ptr1 = *ptr2;
+		ptr1++;
+		ptr2++;
 		n--;
 	}
-	return (s);
+	return (to);
 }
 /*
 int	main(void)
 {
-	char str[50] = "GeeksForGeeks is for programming geeks.";
+	char str1[] = "Geeks";
+	char str2[] = "Quiz";
 
-	printf("\nBefore ft_memset(): %s\n", str);
-	ft_memset(str + 13, '.', 8 * sizeof(char));
-	printf("After ft_memset():  %s", str);
-	//memset(str + 13, '.', 8 * sizeof(char));
-	//printf("After memset():  %s", str);
+	puts("str1 before memcpy ");
+	puts(str1);
+
+	ft_memcpy(str1, str2, sizeof(str2));
+
+	puts("\nstr1 after memcpy ");
+	puts(str1);
+
+	return (0);
 }*/
