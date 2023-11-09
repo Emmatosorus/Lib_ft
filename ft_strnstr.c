@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 15:58:46 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/09 15:13:09 by epolitze         ###   ########.fr       */
+/*   Created: 2023/11/09 11:19:49 by epolitze          #+#    #+#             */
+/*   Updated: 2023/11/09 15:12:22 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,31 +22,35 @@
 // 	return (i);
 // }
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strnstr(char *haystack, char *needle, size_t n)
 {
-	int	i;
+	size_t		j;
+	size_t		i;
 
 	i = 0;
-	if (size > 0)
+	j = 0;
+	if (ft_strlen(needle) < 1)
+		return (haystack);
+	while (haystack[i] != '\0' && n > 0)
 	{
-		while (src[i] != '\0' && size - 1 > 0)
+		if (haystack[i] == needle[j])
 		{
-			dest[i] = src[i];
-			i++;
-			size--;
+			j++;
+			if (j == ft_strlen(needle))
+				return (haystack + (i - (j - 1)));
 		}
-		dest[i] = '\0';
+		else
+		{
+			i = i - j;
+			j = 0;
+		}
+		i++;
+		n--;
 	}
-	return (ft_strlen(src));
+	return (0);
 }
 
 // int	main(void)
 // {
-// 	char	dest[15];
-// 	int		r;
-
-// 	printf("%s", dest);
-// 	r = ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0);
-// 	printf("\n%s", dest);
-// 	printf("\n%d", r);
-//  }
+// 	printf("%s", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0));
+// }
