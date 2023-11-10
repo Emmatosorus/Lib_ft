@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:37:07 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/08 13:18:25 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/10 12:29:18 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	destc = (unsigned char *)dest;
 	srcc = (unsigned char *)src;
+	if (!dest && !src)
+		return (NULL);
 	if (destc < srcc)
 	{
 		while (n--)

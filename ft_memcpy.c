@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:22:51 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/08 18:06:55 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:33:40 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *to, const void *from, size_t n)
 
 	ptr1 = (unsigned char *)to;
 	ptr2 = (unsigned char *)from;
+	if (!from && !to)
+		return (NULL);
 	while (n > 0)
 	{
 		*ptr1 = *ptr2;
@@ -28,19 +30,8 @@ void	*ft_memcpy(void *to, const void *from, size_t n)
 	}
 	return (to);
 }
-/*
-int	main(void)
-{
-	char str1[] = "Geeks";
-	char str2[] = "Quiz";
 
-	puts("str1 before memcpy ");
-	puts(str1);
-
-	ft_memcpy(str1, str2, sizeof(str2));
-
-	puts("\nstr1 after memcpy ");
-	puts(str1);
-
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	printf("%p", ft_memcpy(((void *)0), ((void *)0), 3));
+// }

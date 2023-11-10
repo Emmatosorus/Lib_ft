@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:38:24 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/08 16:53:11 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:20:12 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ char	*ft_strrchr(const char *s, int c)
 		ptr++;
 		len++;
 	}
-	while (*ptr != c && len > 0)
+	while (*ptr != (char)c && len > 0)
 	{
 		ptr--;
 		len--;
-		if (*ptr == c)
+		if (*ptr == (char)c)
 			return (ptr);
 	}
-	if (*ptr == c)
+	if (*ptr == (char)c)
 		return (ptr);
 	return (NULL);
 }
