@@ -6,39 +6,11 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 09:53:24 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/13 11:53:18 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:10:07 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// size_t	ft_strlen(const char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 		i++;
-// 	return (i);
-// }
-
-// size_t	ft_strlcpy(char *dest, const char *src, size_t size)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	if (size > 0)
-// 	{
-// 		while (src[i] != '\0' && size - 1 > 0)
-// 		{
-// 			dest[i] = src[i];
-// 			i++;
-// 			size--;
-// 		}
-// 		dest[i] = '\0';
-// 	}
-// 	return (ft_strlen(src));
-// }
 
 int	ft_word_count(char const *str, char sep)
 {
@@ -63,32 +35,25 @@ void	ft_free(char **splits, int j)
 	free(splits);
 }
 
-// void	ft_split_asssit(size_t wcount, char const *str, char sep, char **splits)
-// {
-	
-// }
+int	ft_skip_sep(int i, char sep, char const *str)
+{
+	while (str[i] == sep)
+		i++;
+	return (i);
+}
 
-char	**ft_split(char const *str, char sep)
+int	ft_split_asssit(size_t wcount, char const *str, char sep, char **splits)
 {
 	size_t	i;
 	size_t	j;
 	size_t	count;
-	size_t	wcount;
-	char	**splits;
-
-	wcount = ft_word_count(str, sep);
-	splits = (char **)malloc((wcount + 1) * sizeof(char *));
-	if (!splits)
-		return (NULL);
-	splits[ft_word_count(str, sep)] = 0;
 
 	i = 0;
 	j = 0;
 	while (str[i] != '\0' && wcount != 0 && wcount != j)
 	{
 		count = 0;
-		while (str[i] == sep)
-			i++;
+		i = ft_skip_sep(i, sep, str);
 		while (str[i] != sep && str[i] != '\0')
 		{
 			count++;
@@ -98,11 +63,26 @@ char	**ft_split(char const *str, char sep)
 		if (!splits[j])
 		{
 			ft_free(splits, j);
-			return (NULL);
+			return (-1);
 		}
 		ft_strlcpy(splits[j], (str + (i - count)), count + 1);
 		j++;
 	}
+	return (0);
+}
+
+char	**ft_split(char const *str, char sep)
+{
+	size_t	wcount;
+	char	**splits;
+
+	wcount = ft_word_count(str, sep);
+	splits = (char **)malloc((wcount + 1) * sizeof(char *));
+	if (!splits)
+		return (NULL);
+	splits[ft_word_count(str, sep)] = 0;
+	if (ft_split_asssit(wcount, str, sep, splits) == -1)
+		return (NULL);
 	return (splits);
 }
 
