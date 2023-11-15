@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:02:20 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/07 17:51:13 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 15:50:15 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	ft_bzero(void *s, size_t n)
 		ptr++;
 		n--;
 	}
+	return ;
 }

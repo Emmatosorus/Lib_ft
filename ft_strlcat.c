@@ -6,21 +6,11 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:36:40 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/09 15:13:01 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:11:00 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// size_t	ft_strlen(const char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i] != '\0')
-// 		i++;
-// 	return (i);
-// }
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {

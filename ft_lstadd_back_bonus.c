@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:49:40 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 13:48:02 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:08:39 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 
-	if (!lst && !new)
+	if (!new)
 		return ;
 	if (!*lst)
 	{

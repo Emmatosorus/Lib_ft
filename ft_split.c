@@ -6,16 +6,16 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 09:53:24 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/13 12:10:07 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:50:30 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_word_count(char const *str, char sep)
+static size_t	ft_word_count(char const *str, char sep)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
@@ -28,21 +28,21 @@ int	ft_word_count(char const *str, char sep)
 	return (j);
 }
 
-void	ft_free(char **splits, int j)
+static void	ft_free(char **splits, size_t j)
 {
 	while (j-- != 0)
 		free(splits[j]);
 	free(splits);
 }
 
-int	ft_skip_sep(int i, char sep, char const *str)
+static int	ft_skip_sep(size_t i, char sep, char const *str)
 {
 	while (str[i] == sep)
 		i++;
 	return (i);
 }
 
-int	ft_split_asssit(size_t wcount, char const *str, char sep, char **splits)
+static int	ft_split_asssit(size_t wc, char const *str, char sep, char **splits)
 {
 	size_t	i;
 	size_t	j;
@@ -50,7 +50,7 @@ int	ft_split_asssit(size_t wcount, char const *str, char sep, char **splits)
 
 	i = 0;
 	j = 0;
-	while (str[i] != '\0' && wcount != 0 && wcount != j)
+	while (str[i] != '\0' && wc != 0 && wc != j)
 	{
 		count = 0;
 		i = ft_skip_sep(i, sep, str);
@@ -77,10 +77,9 @@ char	**ft_split(char const *str, char sep)
 	char	**splits;
 
 	wcount = ft_word_count(str, sep);
-	splits = (char **)malloc((wcount + 1) * sizeof(char *));
+	splits = (char **)ft_calloc((wcount + 1), sizeof(char *));
 	if (!splits)
 		return (NULL);
-	splits[ft_word_count(str, sep)] = 0;
 	if (ft_split_asssit(wcount, str, sep, splits) == -1)
 		return (NULL);
 	return (splits);

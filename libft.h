@@ -6,15 +6,13 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:31:00 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 12:37:00 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:58:27 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <ctype.h>
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>

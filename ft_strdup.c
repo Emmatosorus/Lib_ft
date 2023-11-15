@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:30:20 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/10 14:56:53 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:02:45 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		i;
-	int		len;
+	size_t	i;
+	size_t	len;
 	char	*dest;
 
 	i = 0;
 	len = 0;
 	while (s[len] != '\0')
 		len++;
-	dest = (char *)malloc(len + 1 * sizeof(char));
+	dest = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!dest)
 		return (NULL);
 	while (len > i)
@@ -30,7 +30,6 @@ char	*ft_strdup(const char *s)
 		dest[i] = s[i];
 		i++;
 	}
-	dest[i] = '\0';
 	return (dest);
 }
 

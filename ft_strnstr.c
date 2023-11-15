@@ -6,21 +6,11 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:19:49 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/10 13:17:51 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:23:24 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// size_t	ft_strlen(const char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 		i++;
-// 	return (i);
-// }
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {

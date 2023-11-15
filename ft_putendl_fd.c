@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:35:18 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/13 15:54:14 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:35:01 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ void	ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	write(fd, "\n", 1);
+	return ;
 }

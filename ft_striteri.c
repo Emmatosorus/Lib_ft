@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 15:16:48 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/13 15:22:55 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:06:41 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
@@ -22,4 +22,5 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		f(i, &s[i]);
 		i++;
 	}
+	return ;
 }

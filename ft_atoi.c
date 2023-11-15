@@ -6,11 +6,9 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:14:00 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 14:48:34 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 15:49:52 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

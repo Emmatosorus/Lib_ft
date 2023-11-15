@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:02:16 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/13 17:46:05 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:14:29 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	*lst = new;
+	if (new)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
+	return ;
 }

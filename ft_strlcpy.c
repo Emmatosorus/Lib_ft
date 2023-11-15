@@ -6,25 +6,15 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:58:46 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/09 15:13:09 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/15 17:12:14 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// size_t	ft_strlen(const char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i])
-// 		i++;
-// 	return (i);
-// }
-
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (size > 0)
