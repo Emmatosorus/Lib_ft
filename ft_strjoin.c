@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:33:09 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/16 14:41:00 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:49:18 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		dest[i++] = s2[j++];
 	return (dest);
 }
-
