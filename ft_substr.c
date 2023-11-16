@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:02:55 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/16 12:01:16 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:43:53 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (sub);
 }
-
-// int	main(void)
-// {
-// 	char	*sub;
-
-// 	sub = ft_substr("i just want this part #############", 5, 20);
-// 	printf("%s", sub);
-// 	free(sub);
-// }

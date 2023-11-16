@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 14:37:07 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 16:32:34 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:23:17 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			*(destc + n) = *(srcc + n);
 	return (dest);
 }
-
-/*
-int	main(void)
-{
-    char str[100] = "Learningisfun"; 
-    char *first, *second; 
-    first = str; 
-    second = str;
-	printf("Original string :%s\n", str); 
-	memcpy(first + 8, first, 10); 
-    printf("memmove overlap : %s\n", str);
-	ft_memmove(second + 8, first, 10);
-    printf("ft_memmove overlap :%s", str); 
-}*/

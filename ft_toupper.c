@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:33:02 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/16 11:07:34 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:44:37 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,3 @@ int	ft_toupper(int c)
 		return (c -= 32);
 	return (c);
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = 'a';
-// 	c = ft_toupper(c);
-// 	printf("%c", c);
-// }

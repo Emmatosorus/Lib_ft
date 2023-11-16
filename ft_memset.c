@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:32:44 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/07 17:55:48 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:38:22 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*
-int	main(void)
-{
-	char str[50] = "GeeksForGeeks is for programming geeks.";
-
-	printf("\nBefore ft_memset(): %s\n", str);
-	ft_memset(str + 13, '.', 8 * sizeof(char));
-	printf("After ft_memset():  %s", str);
-	//memset(str + 13, '.', 8 * sizeof(char));
-	//printf("After memset():  %s", str);
-}*/

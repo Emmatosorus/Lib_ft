@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:38:24 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 16:57:08 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:39:53 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return (ptr);
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	char s[] = "tripouille";
-// 	printf("%s", ft_strchr(s, 't' + 256));
-// }

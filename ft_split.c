@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 09:53:24 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 16:50:30 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:38:59 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,21 +84,3 @@ char	**ft_split(char const *str, char sep)
 		return (NULL);
 	return (splits);
 }
-
-// int	main(int argc, char **argv)
-// {
-// 	char	**strs;
-// 	int		i;
-
-// 	argc = 1;
-// 	i = 0;
-// 	strs = ft_split(argv[argc], '+');
-// 	while (strs[i])
-// 	{
-// 		printf("%s\n", strs[i]);
-// 		free(strs[i]);
-// 		i++;
-// 	}
-// 	free(strs[i]);
-// 	free(strs);
-// }

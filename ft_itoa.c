@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:10:30 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 16:05:48 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:42:39 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,3 @@ char	*ft_itoa(int n)
 		number[0] = '0';
 	return (number);
 }
-
-// int	main(void)
-// {
-// 	char	*str;
-
-// 	str = ft_itoa(-42);
-// 	printf("%s\n", str);
-// 	free(str);
-// }

@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:14:30 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/07 11:13:10 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:30:18 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	int	c = 50;
-	int	r = ft_isdigit(c);
-	int	f = isdigit(c);
-
-	printf("isdigit : %d\n", r);
-	printf("ft_isdigit : %d", f);
-}*/

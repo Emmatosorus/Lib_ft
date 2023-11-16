@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:14:24 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 17:22:28 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:42:34 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((int)((unsigned char)s1[i] - (unsigned char)s2[i]));
 }
-
-// int	main(void)
-// {
-// 	printf("%d", ft_strncmp("abcdefgh", "", 0));
-// }

@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:45:58 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/14 14:22:11 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:28:38 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	int	c = 10;
-// 	int	r = ft_isalpha(c);
-// 	int	f = isalpha(c);
-
-// 	printf("isalpha : %d\n", r);
-// 	printf("ft_isalpha : %d", f);
-// }

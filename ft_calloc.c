@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:25:17 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/10 14:28:47 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 13:21:19 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,3 @@ void	*ft_calloc(size_t n, size_t size)
 	ft_bzero(ptr, n * size);
 	return (ptr);
 }
-
-// int	main(void)
-// {
-// 	void	*d1;
-// 	void	*d2;
-
-// 	d1 = calloc(0, 10);
-// 	d2 = ft_calloc(0, 10);
-
-// 	free(d1);
-// 	free(d2);
-// }

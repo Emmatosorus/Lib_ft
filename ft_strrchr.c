@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:38:24 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/10 11:20:12 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:43:29 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,3 @@ char	*ft_strrchr(const char *s, int c)
 		return (ptr);
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	printf("%s", ft_strrchr("bonjour", 'o'));
-// }

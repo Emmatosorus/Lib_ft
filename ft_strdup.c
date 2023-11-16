@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:30:20 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/15 17:02:45 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:40:37 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,3 @@ char	*ft_strdup(const char *s)
 	}
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char	*cpy;
-
-// 	cpy = ft_strdup("hello");
-// 	printf("%s", cpy);
-// 	free(cpy);
-// 	cpy = NULL;
-// }

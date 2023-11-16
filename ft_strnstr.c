@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:19:49 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/16 11:14:40 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:42:57 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char haystack[30] = "aaabcabcd";
-// 	printf("%s", ft_strnstr(haystack, "abcd", 9));
-// }
