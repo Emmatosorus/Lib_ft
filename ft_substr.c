@@ -6,7 +6,7 @@
 /*   By: epolitze <epolitze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:02:55 by epolitze          #+#    #+#             */
-/*   Updated: 2023/11/10 16:27:24 by epolitze         ###   ########.fr       */
+/*   Updated: 2023/11/16 12:01:16 by epolitze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		sublen = ft_strlen(s + start);
 		if (sublen >= len)
 			sublen = len;
-		sub = (char *)malloc((sublen + 1) * sizeof(char));
+		sub = ft_calloc((sublen + 1), sizeof(char));
 		if (!sub)
 			return (NULL);
-		sub[sublen] = '\0';
 		while (sublen--)
 			sub[sublen] = s[start + sublen];
 	}
