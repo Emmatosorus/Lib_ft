@@ -2,7 +2,7 @@
 
 CC = cc
 
-CFLAGS = -Werror -Wextra -Wall
+CFLAGS = -Werror -Wextra -Wall -MMD -MP
 
 NAME = libft.a
 
@@ -43,6 +43,7 @@ SRC = \
 	ft_putnbr_fd.c
 
 OBJ = $(SRC:.c=.o)
+OBJ_D = ${OBJ:.o=.d}
 
 BONUS = $(SRC) \
 	ft_lstnew_bonus.c \
@@ -56,6 +57,7 @@ BONUS = $(SRC) \
 	ft_lstmap_bonus.c
 
 BONUS_OBJ = $(BONUS:.c=.o)
+BONUS_OBJ_D = $(BONUS_OBJ:.o=.d)
 
 # #################### Commands
  
@@ -67,14 +69,14 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
-bonus: $(BONUS_OBJ)
-	ar -rcs $(NAME) $(BONUS_OBJ)
+bonus: 
+	@make SRC="$(BONUS)"
 
 clean:
-	rm -f $(OBJ) $(BONUS_OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ) $(BONUS_OBJ_D)
 
 fclean:
-	rm -f $(OBJ) $(BONUS_OBJ) $(NAME)
+	rm -f $(OBJ) $(BONUS_OBJ) $(BONUS_OBJ_D) $(NAME)
 
 re: fclean all
 
