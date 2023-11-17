@@ -61,16 +61,18 @@ BONUS_OBJ_D = $(BONUS_OBJ:.o=.d)
 
 # #################### Commands
  
+all: $(NAME)
+
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-all: $(NAME)
+-include $(OBJ_D) $(BONUS_OBJ_D)
 
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
 bonus: 
-	@make SRC="$(BONUS)"
+	$(MAKE) SRC="$(BONUS)"
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ) $(BONUS_OBJ_D)
